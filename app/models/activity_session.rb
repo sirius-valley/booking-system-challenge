@@ -4,6 +4,6 @@ class ActivitySession < ApplicationRecord
   has_many :bookings, dependent: :destroy
 
   def full?
-    bookings.where(deleted_at: nil).count >= capacity
+    bookings.count >= capacity
   end
 end
