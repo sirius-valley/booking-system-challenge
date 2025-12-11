@@ -31,13 +31,13 @@ A Rails API application for managing activity bookings. This project is a coding
 2. **Build and start services**
 
    ```bash
-   docker-compose up --build
+   docker compose up --build
    ```
 
 3. **Set up the database** (in a new terminal)
 
    ```bash
-   docker-compose exec web ./bin/rails db:create db:migrate
+   docker compose exec web ./bin/rails db:create db:migrate
    ```
 
 4. **Access the application**
@@ -79,7 +79,7 @@ A Rails API application for managing activity bookings. This project is a coding
 ### With Docker
 
 ```bash
-docker-compose exec web bundle exec rspec
+docker compose exec web bundle exec rspec
 ```
 
 ### Locally
@@ -94,7 +94,7 @@ bundle exec rspec
 
 ```bash
 # With Docker
-docker-compose exec web rails console
+docker compose exec web rails console
 
 # Locally
 ./bin/rails console
@@ -104,22 +104,22 @@ docker-compose exec web rails console
 
 ```bash
 # Reset database
-docker-compose exec web rails db:reset
+docker compose exec web rails db:reset
 
 # Run migrations
-docker-compose exec web rails db:migrate
+docker compose exec web rails db:migrate
 
 # Seed database
-docker-compose exec web rails db:seed
+docker compose exec web rails db:seed
 ```
 
 ### Stop Services
 
 ```bash
-docker-compose down
+docker compose down
 
 # To also remove volumes (database data)
-docker-compose down -v
+docker compose down -v
 ```
 
 ## Project Structure
